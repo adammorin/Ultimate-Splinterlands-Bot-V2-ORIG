@@ -92,6 +92,9 @@ namespace Ultimate_Splinterlands_Bot_V2
                         Log.WriteToLog("Stopping bot...", Log.LogType.Warning);
                         cancellationTokenSource.Cancel();
                         break;
+                    case "secret":
+                        Log.WriteToLog("Secret mode activated! Doesn't do anything though...", Log.LogType.Warning);
+                        break;
                     default:
                         break;
                 }
