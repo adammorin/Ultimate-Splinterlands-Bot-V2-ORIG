@@ -239,6 +239,7 @@ namespace Ultimate_Splinterlands_Bot_V2.Api
                     .Select(x => cards.Where(y => x.card_detail_id == y.card_detail_id)
                     .First()).Distinct().ToArray();
                 cardsFiltered = Settings.CardSettings.FilterByCardSettings(cardsFiltered);
+                Log.WriteToLog($"{username}: cardsFiltered - first card: {cardsFiltered[0]", Log.LogType.Warning);
                 return cardsFiltered;
             }
             catch (Exception ex)
